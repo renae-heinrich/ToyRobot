@@ -9,31 +9,13 @@ namespace ToyRobot
         static void Main(string[] args)
         {
             var grid = new Grid(5, 5, "◻️");
-
-            var robot1 = new Robot(grid, "X");
             
-            // //ensure  Y is the first input based on the requirements
-            // robot1.Place(new Coordinates
-            // {
-            //     Y=1,
-            //     X=2,
-            // }, Position.East);
-            // robot1.Move();
-            // robot1.Move();
-            // robot1.Left();
-            // robot1.Move();
-            // robot1.Report();
-
-            var robotMaker = new RobotMaker();
+            var robotController = new RobotController();
             
-            var game = new Game(grid, robotMaker);
-            
-            
-            //PLACE will add a new robot to the table with incrementing number identifier
+            var game = new Game(grid, robotController);
             
             game.ReadCommand("PLACE 1,2,EAST");
-            
-            
+            game.ReadCommand("PLACE 1,1,EAST");
             game.ReadCommand("MOVE");
             game.ReadCommand("MOVE");
             game.ReadCommand("LEFT");

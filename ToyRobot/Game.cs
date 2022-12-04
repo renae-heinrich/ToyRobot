@@ -10,48 +10,32 @@ namespace ToyRobot
         private IGrid _grid;
         private List<IRobot> _robots;
         public IRobot ActiveRobot { get; set; }
-        private IRobotMaker _robotMaker;
+        private IRobotController _robotController;
 
-        public Game(IGrid grid, IRobotMaker robotMaker)
+        public Game(IGrid grid, IRobotController robotController)
         {
             _grid = grid;
             _robots = new List<IRobot>();
-            _robotMaker = robotMaker;
+            _robotController = robotController;
         }
         
         public void ReadCommand(string command)
         {
             var word = command.Split(" ").ToList();
             
-            //need to ensure place first command
             if (word.Count == 1 && ActiveRobot != null)
             {
-                switch (word[0].ToUpper())
-                {
-                    case "MOVE":
-                        ActiveRobot.Move();
-                        break;
-                    case "LEFT":
-                        ActiveRobot.Left();
-                        break;
-                    case "RIGHT":
-                        ActiveRobot.Right();
-                        break;
-                    case "REPORT":
-                        ActiveRobot.Report();
-                        break;
-                }
+                _robotController.Read(word[0], ActiveRobot);
             }
 
             if (word[0].ToUpper() == "PLACE" && word.Count == 2)
             {
-                
-               var robot = _robotMaker.CreateRobot(_grid, (_robots.Count + 1).ToString());
+               var robot = _robotController.CreateRobot(_grid, (_robots.Count + 1).ToString());
                 
                 var userInput = ConvertInput(word[1]);
                 if (userInput != null)
                 {
-                    _robotMaker.Place(robot, userInput.Coordinates, userInput.Position);
+                    _robotController.Place(robot, userInput.Coordinates, userInput.Position);
                     
                     if (robot.Status == GridStatus.Ok)
                     {
@@ -98,28 +82,5 @@ namespace ToyRobot
             TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
             return textInfo.ToTitleCase(word.ToLower());
         }
-    }
-
-    public class RobotMaker : IRobotMaker
-    {
-        
-        public Robot CreateRobot(IGrid grid, string icon)
-        {
-            return new Robot(grid, icon);
-        }
-
-        public GridStatus Place(Robot robot, Coordinates coordinates, Position position)
-        {
-            
-            robot.Place(coordinates, position);
-
-            return robot.Status;
-        }
-    }
-
-    public interface IRobotMaker
-    {
-        public Robot CreateRobot(IGrid grid, string icon);
-        public GridStatus Place(Robot robot, Coordinates coordinates, Position position);
     }
 }

@@ -10,5 +10,7 @@ namespace ToyRobot
         public void Move();
         public void Left();
         public void Right();
+
+        public GridStatus Status { get; set; }
     }
 }

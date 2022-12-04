@@ -23,7 +23,7 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc04e134_002Dcb04_002D44b1_002D8815_002D4688476aaebc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FirstCommand_GivenToRobot_MustBePlace" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.FirstCommand_GivenToRobot_MustBePlace&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
