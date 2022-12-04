@@ -10,6 +10,8 @@ namespace ToyRobot
 
         private Coordinates _currentCoordinates;
         private Position? _facingPosition;
+        
+        public GridStatus Status { get; set; }
 
         public Robot(IGrid grid, string icon)
         {
@@ -17,7 +19,7 @@ namespace ToyRobot
             _icon = icon;
         }
         
-        public GridStatus Place(Coordinates coordinates, Position position)
+        public void Place(Coordinates coordinates, Position position)
         {
             var status = _grid.UpdateBoard(coordinates, _icon);
             if (status == GridStatus.Ok)
@@ -28,9 +30,12 @@ namespace ToyRobot
                     X = coordinates.X,
                     Y = coordinates.Y
                 };
-
+                Status = GridStatus.Ok;
             }
-            return status;
+            else
+            {
+                Status = GridStatus.Error;
+            }
         }
         
         public void Move()

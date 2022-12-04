@@ -9,17 +9,14 @@ namespace ToyRobot
     {
         private IGrid _grid;
         private List<IRobot> _robots;
-        private IRobot _activeRobot;
+        public IRobot ActiveRobot { get; set; }
         private IRobotMaker _robotMaker;
-        private IRobot _robot;
 
         public Game(IGrid grid, IRobotMaker robotMaker)
         {
             _grid = grid;
             _robots = new List<IRobot>();
-            _activeRobot = null;
             _robotMaker = robotMaker;
-            _robot = null;
         }
         
         public void ReadCommand(string command)
@@ -27,51 +24,40 @@ namespace ToyRobot
             var word = command.Split(" ").ToList();
             
             //need to ensure place first command
-            if (word.Count == 1)
+            if (word.Count == 1 && ActiveRobot != null)
             {
                 switch (word[0].ToUpper())
                 {
                     case "MOVE":
-                        _activeRobot.Move();
+                        ActiveRobot.Move();
                         break;
                     case "LEFT":
-                        _activeRobot.Left();
+                        ActiveRobot.Left();
                         break;
                     case "RIGHT":
-                        _activeRobot.Right();
+                        ActiveRobot.Right();
                         break;
                     case "REPORT":
-                        _activeRobot.Report();
+                        ActiveRobot.Report();
                         break;
                 }
             }
 
             if (word[0].ToUpper() == "PLACE" && word.Count == 2)
             {
-                //need to ask someone to 
-                //1. create a new robot
                 
-                
-                // _robot = _robotMaker.CreateRobot(_grid, (_robots.Count + 1).ToString());
+               var robot = _robotMaker.CreateRobot(_grid, (_robots.Count + 1).ToString());
                 
                 var userInput = ConvertInput(word[1]);
                 if (userInput != null)
                 {
-                    var robot = _robotMaker.Place(userInput.Coordinates, userInput.Position, _grid,
-                        (_robots.Count + 1).ToString());
-                    // var status = _robot.Place(userInput.Coordinates, userInput.Position);
-
-                    if (robot != null)
+                    _robotMaker.Place(robot, userInput.Coordinates, userInput.Position);
+                    
+                    if (robot.Status == GridStatus.Ok)
                     {
-                        _activeRobot = robot;
+                        ActiveRobot = robot;
                         _robots.Add(robot);
                     }
-                    
-                    // if (status == GridStatus.Ok)
-                    // {
-                    //     _activeRobot = _robot;
-                    //     _robots.Add(_robot);
-                    // }
                 }  
             }
         }
@@ -122,19 +108,18 @@ namespace ToyRobot
             return new Robot(grid, icon);
         }
 
-        public Robot Place(Coordinates coordinates, Position position, IGrid grid, string icon)
+        public GridStatus Place(Robot robot, Coordinates coordinates, Position position)
         {
-            var robot = CreateRobot(grid, icon);
+            
+            robot.Place(coordinates, position);
 
-            var status = robot.Place(coordinates, position);
-
-            return status == GridStatus.Ok ? robot : null;
+            return robot.Status;
         }
     }
 
     public interface IRobotMaker
     {
         public Robot CreateRobot(IGrid grid, string icon);
-        public Robot Place(Coordinates coordinates, Position position, IGrid grid, string icon);
+        public GridStatus Place(Robot robot, Coordinates coordinates, Position position);
     }
 }

@@ -19,15 +19,27 @@ namespace ToyRobotTest
         }
         
         [Fact]
-        public void Place_ReturnsNull_WhenGridUpdateError()
+        public void Place_UpdatesRobotStatusToError_WhenGridUpdateError()
         {
             var coordinates = new Coordinates {X = 0, Y = 1};
             
             _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Error);
             
-            var result = _robot.Place(coordinates, Position.North);
+            _robot.Place(coordinates, Position.North);
             
-            Assert.Null(result);
+            Assert.Equal(GridStatus.Error, _robot.Status);
+        }
+        
+        [Fact]
+        public void Place_UpdatesRobotStatusToOk_WhenGridUpdateSuccess()
+        {
+            var coordinates = new Coordinates {X = 0, Y = 1};
+            
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Ok);
+            
+            _robot.Place(coordinates, Position.North);
+            
+            Assert.Equal(GridStatus.Ok, _robot.Status);
         }
         
         [Fact]

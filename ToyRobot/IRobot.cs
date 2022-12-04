@@ -4,7 +4,7 @@ namespace ToyRobot
     {
         Coordinates GetCurrentCoordinates();
         Position? GetCurrenFacingPosition();
-        GridStatus Place(Coordinates coordinates, Position position);
+        void Place(Coordinates coordinates, Position position);
         void Report();
 
         public void Move();

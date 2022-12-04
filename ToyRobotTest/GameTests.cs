@@ -10,21 +10,16 @@ namespace ToyRobotTest
     public class GameTests
     {
         private readonly IGrid _grid;
-        private readonly IRobot _activeRobot;
         private readonly List<Robot> _robots;
         private readonly Game _game;
         private readonly IRobotMaker _robotMaker;
-        private readonly IRobot _robot;
 
         public GameTests()
         {
             _grid = Substitute.For<IGrid>();
-            _activeRobot = Substitute.For<IRobot>();
             _robotMaker = Substitute.For<IRobotMaker>();
             _game = new Game(_grid, _robotMaker);
             _robots = new List<Robot>();
-          
-            _robot = Substitute.For<IRobot>();
         }
 
         [Fact]
@@ -34,24 +29,23 @@ namespace ToyRobotTest
 
             _game.ReadCommand(command);
             
-            _activeRobot.DidNotReceive().Move();
+            Assert.Null(_game.ActiveRobot);
         }
 
         [Fact]
         public void GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod()
         {
+            var robot = new Robot(_grid, "X") {Status = GridStatus.Ok};
+            
+            _robotMaker.CreateRobot(_grid, "1").Returns(robot);
 
-            var robot = new Robot(_grid, "X");
-
-            _robotMaker.CreateRobot(Arg.Any<Grid>(), Arg.Any<string>()).Returns(robot);
-
-
-            _robotMaker.Place(Arg.Any<Coordinates>(), Arg.Any<Position>(), _grid, "X").Returns(robot);
-
+            _robotMaker.Place(robot, Arg.Any<Coordinates>(), Arg.Any<Position>()).Returns(GridStatus.Ok);
             
             _game.ReadCommand("PLACE 0,0,NORTH");
+            
+            Assert.Equal(_game.ActiveRobot, robot);
 
-            robot.Received(1).Place(new Coordinates {X = 0, Y = 0}, Position.North);
+          
 
 
         }
