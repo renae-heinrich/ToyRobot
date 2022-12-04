@@ -1,0 +1,32 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/renae.heinrich/Library/Caches/JetBrains/Rider2021.1/resharper-host/temp/Rider/vAny/CoverageData/_ToyRobot.-1344509807/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1f048ffa_002D1f37_002D480c_002Da339_002D0d29e5135e8b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RobotTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad0b51cf_002Ddfcd_002D402b_002D8c32_002Da4554ff28417/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests.Place_ReturnsNewRobot&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests.Place_ReturnsNull_WhenGridUpdateError&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e0c82ebe_002Daf54_002D458a_002D9a91_002D7485e8703916/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</wpf:ResourceDictionary>

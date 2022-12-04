@@ -1,0 +1,12 @@
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/bin/Debug/netcoreapp3.1/ToyRobot.deps.json
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/bin/Debug/netcoreapp3.1/ToyRobot.runtimeconfig.json
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/bin/Debug/netcoreapp3.1/ToyRobot.runtimeconfig.dev.json
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/bin/Debug/netcoreapp3.1/ToyRobot.dll
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/bin/Debug/netcoreapp3.1/ToyRobot.pdb
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/obj/Debug/netcoreapp3.1/ToyRobot.csproj.AssemblyReference.cache
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/obj/Debug/netcoreapp3.1/ToyRobot.AssemblyInfoInputs.cache
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/obj/Debug/netcoreapp3.1/ToyRobot.AssemblyInfo.cs
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/obj/Debug/netcoreapp3.1/ToyRobot.csproj.CoreCompileInputs.cache
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/obj/Debug/netcoreapp3.1/ToyRobot.dll
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/obj/Debug/netcoreapp3.1/ToyRobot.pdb
+/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobot/obj/Debug/netcoreapp3.1/ToyRobot.genruntimeconfig.cache
