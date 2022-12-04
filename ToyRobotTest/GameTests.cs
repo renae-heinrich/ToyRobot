@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using FluentAssertions;
 using NSubstitute;
-using NSubstitute.ReceivedExtensions;
 using ToyRobot;
 using Xunit;
 
@@ -44,11 +42,6 @@ namespace ToyRobotTest
             _game.ReadCommand("PLACE 0,0,NORTH");
             
             Assert.Equal(_game.ActiveRobot, robot);
-
-          
-
-
         }
-        
     }
 }
