@@ -7,15 +7,14 @@ namespace ToyRobot
 {
     public class Game
     {
-        private IGrid _grid;
-        private List<IRobot> _robots;
-        public IRobot ActiveRobot { get; set; }
-        private IRobotController _robotController;
-
+        private readonly IGrid _grid;
+        public readonly List<IRobot> Robots = new List<IRobot>();
+        public IRobot ActiveRobot { get; private set; }
+        private readonly IRobotController _robotController;
+        
         public Game(IGrid grid, IRobotController robotController)
         {
             _grid = grid;
-            _robots = new List<IRobot>();
             _robotController = robotController;
         }
         
@@ -25,22 +24,22 @@ namespace ToyRobot
             
             if (word.Count == 1 && ActiveRobot != null)
             {
-                _robotController.Read(word[0], ActiveRobot);
+                _robotController.Read(word[0], ActiveRobot, Robots);
             }
 
             if (word[0].ToUpper() == "PLACE" && word.Count == 2)
             {
-               var robot = _robotController.CreateRobot(_grid, (_robots.Count + 1).ToString());
-                
+               var robot = _robotController.CreateRobot(_grid, (Robots.Count + 1).ToString());
+               
                 var userInput = ConvertInput(word[1]);
                 if (userInput != null)
                 {
                     _robotController.Place(robot, userInput.Coordinates, userInput.Position);
                     
-                    if (robot.Status == GridStatus.Ok)
+                    if (robot.Status == Status.Ok)
                     {
                         ActiveRobot = robot;
-                        _robots.Add(robot);
+                        Robots.Add(robot);
                     }
                 }  
             }

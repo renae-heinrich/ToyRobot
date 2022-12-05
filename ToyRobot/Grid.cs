@@ -36,16 +36,16 @@ namespace ToyRobot
             return  _board;
         }
         
-        public GridStatus UpdateBoard(Coordinates coordinates, string icon)
+        public Status UpdateBoard(Coordinates coordinates, string icon)
         {
             if (icon == _square)
             {
-                return GridStatus.Error;
+                return Status.Error;
             }
 
             var status = CheckStatus(coordinates);
 
-            if (status == GridStatus.Ok)
+            if (status == Status.Ok)
             {
                 var playerIconList = GetBoard().FirstOrDefault(x => x.Contains(icon));
                 if (playerIconList != null)
@@ -58,7 +58,7 @@ namespace ToyRobot
             return status;
         }
 
-        private GridStatus CheckStatus(Coordinates coordinates)
+        private Status CheckStatus(Coordinates coordinates)
         {
             string requestedSquare;
             try
@@ -67,10 +67,10 @@ namespace ToyRobot
             }
             catch (Exception e)
             {
-                return GridStatus.Error;
+                return Status.Error;
             }
             
-            return requestedSquare != _square ? GridStatus.Occupied : GridStatus.Ok;
+            return requestedSquare != _square ? Status.Occupied : Status.Ok;
         }
     }
 }

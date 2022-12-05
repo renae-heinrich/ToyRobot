@@ -21,7 +21,6 @@ namespace ToyRobot
             game.ReadCommand("LEFT");
             game.ReadCommand("MOVE");
             game.ReadCommand("REPORT");
-            
         }
     }
 }

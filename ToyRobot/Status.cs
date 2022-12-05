@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace ToyRobot
 {
-    public enum GridStatus
+    public enum Status
     {
         [Description("Error")]
         Error,
@@ -10,12 +10,6 @@ namespace ToyRobot
         Ok,
         [Description("Occupied")]
         Occupied,
-    }
-
-    public class GridS
-    {
-        public GridStatus GridStatus { get; set; }
-        public string Message { get; set; }
     }
 }
 

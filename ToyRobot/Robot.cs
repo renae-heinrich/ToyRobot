@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ToyRobot
 {
@@ -11,7 +12,9 @@ namespace ToyRobot
         private Coordinates _currentCoordinates;
         private Position? _facingPosition;
         
-        public GridStatus Status { get; set; }
+        public Status Status { get; set; }
+        
+        public string Name { get; set; }
 
         public Robot(IGrid grid, string icon)
         {
@@ -22,7 +25,7 @@ namespace ToyRobot
         public void Place(Coordinates coordinates, Position position)
         {
             var status = _grid.UpdateBoard(coordinates, _icon);
-            if (status == GridStatus.Ok)
+            if (status == Status.Ok)
             {
                 _facingPosition = position;
                 _currentCoordinates = new Coordinates
@@ -30,11 +33,11 @@ namespace ToyRobot
                     X = coordinates.X,
                     Y = coordinates.Y
                 };
-                Status = GridStatus.Ok;
+                Status = Status.Ok;
             }
             else
             {
-                Status = GridStatus.Error;
+                Status = Status.Error;
             }
         }
         
@@ -48,7 +51,7 @@ namespace ToyRobot
 
             var status = _grid.UpdateBoard(newCoordinates, _icon);
 
-            if (status == GridStatus.Ok)
+            if (status == Status.Ok)
             {
                 _currentCoordinates = newCoordinates;
             }
@@ -146,14 +149,13 @@ namespace ToyRobot
             _facingPosition = newFacingPosition;
         }
 
-        public void Report()
+        public string Report()
         {
             if (_facingPosition == null || _currentCoordinates == null)
             {
-                return;
+                return  null;
             }
-            
-            Console.WriteLine($"{_currentCoordinates.X},{_currentCoordinates.Y},{_facingPosition.ToString()?.ToUpper()}");
+            return ($"{_currentCoordinates.X},{_currentCoordinates.Y},{_facingPosition.ToString()?.ToUpper()}");
         }
     }
 }

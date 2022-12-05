@@ -23,11 +23,11 @@ namespace ToyRobotTest
         {
             var coordinates = new Coordinates {X = 0, Y = 1};
             
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Error);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Error);
             
             _robot.Place(coordinates, Position.North);
             
-            Assert.Equal(GridStatus.Error, _robot.Status);
+            Assert.Equal(Status.Error, _robot.Status);
         }
         
         [Fact]
@@ -35,11 +35,11 @@ namespace ToyRobotTest
         {
             var coordinates = new Coordinates {X = 0, Y = 1};
             
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Ok);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
             
             _robot.Place(coordinates, Position.North);
             
-            Assert.Equal(GridStatus.Ok, _robot.Status);
+            Assert.Equal(Status.Ok, _robot.Status);
         }
         
         [Fact]
@@ -47,7 +47,7 @@ namespace ToyRobotTest
         {
             var coordinates = new Coordinates {X = 0, Y = 1};
             
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Ok);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
             
             _robot.Place(coordinates, Position.North);
             
@@ -60,7 +60,7 @@ namespace ToyRobotTest
         {
             var coordinates = new Coordinates {X = 0, Y = 1};
             
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Ok);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
             
             _robot.Place(coordinates, Position.North);
             
@@ -71,7 +71,7 @@ namespace ToyRobotTest
         public void Place_WillNotUpdateRobotsCoordinates_WhenUpdateBoardReturnsErrorStatus()
         {
             var coordinates = new Coordinates {X = 0, Y = 1};
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Error);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Error);
             
             _robot.Place(coordinates, Position.North);
             
@@ -83,7 +83,7 @@ namespace ToyRobotTest
         {
             var coordinates = new Coordinates {X = 0, Y = 1};
            
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Error);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Error);
             
             _robot.Place(coordinates, Position.South);
 
@@ -96,7 +96,7 @@ namespace ToyRobotTest
         {
             var coordinates = new Coordinates {X = 2, Y = 2};
             
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Ok);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
 
             _robot.Place(coordinates, position);
             _robot.Move();
@@ -118,7 +118,7 @@ namespace ToyRobotTest
         {    
             var coordinates = new Coordinates {X = 0, Y = 0};
             
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Ok);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
             
             _robot.Place(coordinates, currentPosition);
             _robot.Left();
@@ -140,7 +140,7 @@ namespace ToyRobotTest
         public void Right_WillRotateTheRobot_RightNinetyDegrees_WithoutChangingRobotsPosition(Position currentPosition, Position expectedNextPosition)
         {    
             var coordinates = new Coordinates {X = 0, Y = 0};
-            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(GridStatus.Ok);
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
             
             _robot.Place(coordinates, currentPosition);
             _robot.Right();

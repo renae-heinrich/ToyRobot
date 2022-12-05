@@ -6,6 +6,11 @@
     &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=43adea21_002D4563_002D42bf_002Da700_002D98856fce2bf2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GivenValidCommand_ReadCommand_CallsRobotController" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenValidCommand_ReadCommand_CallsRobotController&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad0b51cf_002Ddfcd_002D402b_002D8c32_002Da4554ff28417/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
@@ -21,7 +26,7 @@
     &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc04e134_002Dcb04_002D44b1_002D8815_002D4688476aaebc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FirstCommand_GivenToRobot_MustBePlace" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc04e134_002Dcb04_002D44b1_002D8815_002D4688476aaebc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FirstCommand_GivenToRobot_MustBePlace" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;

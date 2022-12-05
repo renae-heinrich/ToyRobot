@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace ToyRobot
 {
     public interface IRobot
@@ -5,12 +7,13 @@ namespace ToyRobot
         Coordinates GetCurrentCoordinates();
         Position? GetCurrenFacingPosition();
         void Place(Coordinates coordinates, Position position);
-        void Report();
+        string Report();
 
         public void Move();
         public void Left();
         public void Right();
 
-        public GridStatus Status { get; set; }
+        public Status Status { get; set; }
+        public string Name { get; set; }
     }
 }

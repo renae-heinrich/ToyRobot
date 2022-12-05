@@ -1,21 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace ToyRobot
 {
     public class RobotController : IRobotController
     {
-        
         public Robot CreateRobot(IGrid grid, string icon)
         {
-            return new Robot(grid, icon);
+            var robot = new Robot(grid, icon) {Name = $"Robot {icon}"};
+            return robot;
         }
 
-        public GridStatus Place(IRobot robot, Coordinates coordinates, Position position)
+        public Status Place(IRobot robot, Coordinates coordinates, Position position)
         {
             robot.Place(coordinates, position);
 
             return robot.Status;
         }
+
+        public void Report(IRobot activeRobot, IList<IRobot> robots)
+        {
+            Console.WriteLine( $"{robots.Count} present. Active Robot: {activeRobot.Name}.\nCurrent Position: {activeRobot.Report()}") ;
+        }
         
-        public void Read(string command, IRobot robot)
+        public void Read(string command, IRobot robot, List<IRobot> robots)
         {
             switch (command.ToUpper())
             {
@@ -29,7 +38,7 @@ namespace ToyRobot
                     robot.Right();
                     break;
                 case "REPORT":
-                    robot.Report();
+                    Report(robot, robots);
                     break;
             }
         }

@@ -65,7 +65,7 @@ namespace ToyRobotTest
                 Y = 6
             };
             
-            Assert.Equal(GridStatus.Error, _grid.UpdateBoard(coordinates, "🤖"));
+            Assert.Equal(Status.Error, _grid.UpdateBoard(coordinates, "🤖"));
         }
         
         [Fact]
@@ -78,7 +78,7 @@ namespace ToyRobotTest
                 Y = 1
             };
             
-            Assert.Equal(GridStatus.Occupied, _grid.UpdateBoard(coordinates, "🤖"));
+            Assert.Equal(Status.Occupied, _grid.UpdateBoard(coordinates, "🤖"));
         }
         
         [Fact]
@@ -91,7 +91,7 @@ namespace ToyRobotTest
                 Y = 1
             };
             
-            Assert.Equal(GridStatus.Error, _grid.UpdateBoard(coordinates, "◻️"));
+            Assert.Equal(Status.Error, _grid.UpdateBoard(coordinates, "◻️"));
         }
     }
 }
