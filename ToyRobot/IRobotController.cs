@@ -8,6 +8,6 @@ namespace ToyRobot
         public Status Place(IRobot robot, Coordinates coordinates, Position position);
         public void Read(string command, IRobot robot, List<IRobot> robots);
 
-        public void Report(IRobot activeRobot, IList<IRobot> robots);
+        public string Report(IRobot activeRobot, IList<IRobot> robots);
     }
 }

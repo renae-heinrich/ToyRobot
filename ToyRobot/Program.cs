@@ -1,4 +1,6 @@
-﻿namespace ToyRobot
+﻿using System;
+
+namespace ToyRobot
 {
     class Program
     {

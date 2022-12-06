@@ -19,9 +19,9 @@ namespace ToyRobot
             return robot.Status;
         }
 
-        public void Report(IRobot activeRobot, IList<IRobot> robots)
+        public string Report(IRobot activeRobot, IList<IRobot> robots)
         {
-            Console.WriteLine( $"{robots.Count} present. Active Robot: {activeRobot.Name}.\nCurrent Position: {activeRobot.Report()}") ;
+            return ( $"{robots.Count} present. Active Robot: {activeRobot.Name}.\nCurrent Position: {activeRobot.Report()}") ;
         }
         
         public void Read(string command, IRobot robot, List<IRobot> robots)
@@ -38,7 +38,7 @@ namespace ToyRobot
                     robot.Right();
                     break;
                 case "REPORT":
-                    Report(robot, robots);
+                    Console.WriteLine(Report(robot, robots));
                     break;
             }
         }

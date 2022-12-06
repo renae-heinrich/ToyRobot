@@ -60,5 +60,23 @@ namespace ToyRobotTest
 
             _robot.Received().Right();
         }
+        
+        [Fact]
+        public void Report_ShouldReportHowManyRobotsPresent()
+        {
+            var report = _robotController.Report(_robot, new List<IRobot>{_robot});
+
+            Assert.Contains("1 present", report);
+        }
+        
+        [Fact]
+        public void Report_ShouldReportWhichRobotIsActiveRobot()
+        {
+            var activeRobot = new Robot(_grid, "Active") {Name = "Robot Active"};
+
+            var report = _robotController.Report(activeRobot, new List<IRobot>{_robot, activeRobot});
+
+            Assert.Contains(activeRobot.Name, report);
+        }
     }
 }
