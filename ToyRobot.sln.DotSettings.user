@@ -1,36 +1,43 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/renae.heinrich/Library/Caches/JetBrains/Rider2021.1/resharper-host/temp/Rider/vAny/CoverageData/_ToyRobot.-1344509807/Snapshot/snapshot.utdcvr</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1f048ffa_002D1f37_002D480c_002Da339_002D0d29e5135e8b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RobotTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=11be46cb_002D64f0_002D4a1f_002Da770_002Dff3e6105dc72/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Place_ShouldCallRobotPlace_ #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotControllerTests.Place_ShouldCallRobotPlace_&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=43adea21_002D4563_002D42bf_002Da700_002D98856fce2bf2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GivenValidCommand_ReadCommand_CallsRobotController" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1a442be5_002Db159_002D4f0d_002Da469_002D0b023159142f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Place_ShouldCallRobotPlace_ #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenValidCommand_ReadCommand_CallsRobotController&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotControllerTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad0b51cf_002Ddfcd_002D402b_002D8c32_002Da4554ff28417/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=336a840d_002Ddf30_002D483f_002Dad78_002D36bbc8cb7eb3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Place_ShouldCallRobotPlace_ #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests.Place_ReturnsNewRobot&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests.Place_ReturnsNull_WhenGridUpdateError&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests.Place_UpdatesRobotStatusToOk_WhenGridUpdateSuccess&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotTests&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotControllerTests.Place_ShouldCallRobotPlace_&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e0c82ebe_002Daf54_002D458a_002D9a91_002D7485e8703916/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6e0bb792_002D0096_002D4f52_002D9ac2_002D183bb522b032/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Place_ShouldCallRobotPlace_ #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests.GivenCommand_ReadCommand_AsksActiveRobotToPerformMethod&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotControllerTests.Place_ShouldCallRobotPlace_&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc04e134_002Dcb04_002D44b1_002D8815_002D4688476aaebc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FirstCommand_GivenToRobot_MustBePlace" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bf37da3d_002Dfa6a_002D467f_002Db481_002Da8f23e7ab02e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;ToyRobotTest&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/renae.heinrich/myob/c#Katas/Api/ToyRobot/ToyRobotTest" Presentation="&amp;lt;ToyRobotTest&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e9eec693_002D03be_002D47d8_002Dba1f_002Df6f7a2337f48/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Read_ShouldCall_MoveCommandMove" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.GameTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotControllerTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f2cefcf5_002Dca70_002D4c99_002D98d4_002Dd856f9522b8d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Place_ShouldCallRobotPlace_" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::6EDE2CB2-74C1-49CC-B55E-9FA8AD0041CE::net5.0::ToyRobotTest.RobotControllerTests.Place_ShouldCallRobotPlace_&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
 	
 	
 	

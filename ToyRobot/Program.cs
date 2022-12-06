@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace ToyRobot
+﻿namespace ToyRobot
 {
     class Program
     {
@@ -16,6 +12,8 @@ namespace ToyRobot
             
             game.ReadCommand("PLACE 1,2,EAST");
             game.ReadCommand("PLACE 1,1,EAST");
+            game.ReadCommand("PLACE 0,0,EAST");
+            game.ReadCommand("PLACE 0,0,EAST");
             game.ReadCommand("MOVE");
             game.ReadCommand("MOVE");
             game.ReadCommand("LEFT");
