@@ -19,7 +19,7 @@ namespace ToyRobot
             _icon = icon;
         }
         
-        public void Place(Coordinates coordinates, Position position)
+        public void Place(Coordinates coordinates, Position? position)
         {
             var status = _grid.UpdateBoard(coordinates, _icon);
             if (status == Status.Ok)
@@ -89,11 +89,6 @@ namespace ToyRobot
             return _facingPosition;
         }
         
-        public string GetIcon()
-        {
-            return _icon;
-        }
-
         public void Left()
         {
             if (_currentCoordinates == null)

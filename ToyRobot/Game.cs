@@ -43,6 +43,16 @@ namespace ToyRobot
                     }
                 }  
             }
+
+            if (word[0].ToUpper() == "ROBOT" && word.Count == 2)
+            {
+                var requestedRobot = Robots.Find(r => r.Name.Contains(word[1]));
+
+                if (requestedRobot != null)
+                {
+                    ActiveRobot = requestedRobot;
+                }
+            }
         }
         
         private static Input ConvertInput(string command)

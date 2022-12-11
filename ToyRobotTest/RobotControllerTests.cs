@@ -78,5 +78,13 @@ namespace ToyRobotTest
 
             Assert.Contains(activeRobot.Name, report);
         }
+        
+        [Fact]
+        public void Report_ShouldReportCallRobotReport()
+        {
+            _robotController.Report(_robot, new List<IRobot>{_robot, _robot});
+
+            _robot.Received().Report();
+        }
     }
 }

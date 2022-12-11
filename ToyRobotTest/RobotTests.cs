@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using FluentAssertions;
 using ToyRobot;
@@ -16,6 +15,44 @@ namespace ToyRobotTest
         {
             _grid = Substitute.For<IGrid>();
             _robot = new Robot(_grid, "🤖");
+        }
+
+        [Fact]
+        public void Report_ReturnsStringCurrentCoordinates_AndFacingPosition()
+        {
+            var coordinates = new Coordinates {X = 0, Y = 1};
+            
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
+            
+            _robot.Place(coordinates, Position.North);
+
+            var actual = _robot.Report();
+
+            Assert.Contains("0,1,NORTH", actual);
+        }
+        
+        [Fact]
+        public void Report_ReturnsNull_WhenFacingPosition_Null()
+        {
+            var coordinates = new Coordinates {X = 0, Y = 1};
+            
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
+            
+            _robot.Place(coordinates, null);
+
+            Assert.Null(_robot.Report());
+        }
+        
+        [Fact]
+        public void Report_ReturnsNull_WhenCurrentCoordinates_Null()
+        {
+            var coordinates = new Coordinates {X = 0, Y = 1};
+            
+            _grid.UpdateBoard(Arg.Any<Coordinates>(), Arg.Any<string>()).Returns(Status.Ok);
+            
+            _robot.Place(coordinates, null);
+
+            Assert.Null(_robot.Report());
         }
         
         [Fact]

@@ -6,7 +6,7 @@ namespace ToyRobot
     {
         Coordinates GetCurrentCoordinates();
         Position? GetCurrenFacingPosition();
-        void Place(Coordinates coordinates, Position position);
+        void Place(Coordinates coordinates, Position?  position);
         string Report();
 
         public void Move();
