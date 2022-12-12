@@ -1,4 +1,6 @@
-﻿namespace ToyRobot
+﻿using System;
+
+namespace ToyRobot
 {
     class Program
     {
@@ -10,24 +12,13 @@
             
             var game = new Game(grid, robotController);
             
-            game.ReadCommand("PLACE 1,2,EAST");
-            game.ReadCommand("MOVE");
-            game.ReadCommand("MOVE");
-            game.ReadCommand("LEFT");
-            game.ReadCommand("MOVE");
-            game.ReadCommand("REPORT");
-            game.ReadCommand("PLACE 1,1,EAST");
-            game.ReadCommand("REPORT");
-            game.ReadCommand("PLACE 0,0,EAST");
-            game.ReadCommand("ROBOT 1");
-            game.ReadCommand("MOVE");
-            game.ReadCommand("MOVE");
-            game.ReadCommand("LEFT");
-            game.ReadCommand("MOVE");
-            game.ReadCommand("REPORT");
-            game.ReadCommand("ROBOT 3");
-            game.ReadCommand("LEFT");
-            game.ReadCommand("REPORT");
+            string command;
+
+            do
+            {
+                command = Console.ReadLine();
+                game.ReadCommand(command); 
+            } while (command.ToUpper() != "STOP");
         }
     }
 }
