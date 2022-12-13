@@ -1,4 +1,5 @@
 using ToyRobot;
+using ToyRobot.Enum;
 using Xunit;
 
 namespace ToyRobotTest

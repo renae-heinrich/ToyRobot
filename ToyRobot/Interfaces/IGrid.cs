@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using ToyRobot.Enum;
 
-namespace ToyRobot
+namespace ToyRobot.Interfaces
 {
     public interface IGrid
     {

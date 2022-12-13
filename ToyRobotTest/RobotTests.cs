@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using FluentAssertions;
 using ToyRobot;
 using NSubstitute;
+using ToyRobot.Enum;
+using ToyRobot.Interfaces;
 using Xunit;
 
 namespace ToyRobotTest

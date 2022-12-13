@@ -1,3 +1,6 @@
+using ToyRobot.Enum;
+using ToyRobot.Interfaces;
+
 namespace ToyRobot
 {
     public class Robot : IRobot

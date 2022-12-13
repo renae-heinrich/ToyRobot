@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using NSubstitute;
 using ToyRobot;
+using ToyRobot.Enum;
+using ToyRobot.Interfaces;
 using Xunit;
 
 namespace ToyRobotTest

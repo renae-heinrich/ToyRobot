@@ -1,6 +1,6 @@
-using System.Collections.Generic;
+using ToyRobot.Enum;
 
-namespace ToyRobot
+namespace ToyRobot.Interfaces
 {
     public interface IRobot
     {
@@ -8,11 +8,9 @@ namespace ToyRobot
         Position? GetCurrenFacingPosition();
         void Place(Coordinates coordinates, Position?  position);
         string Report();
-
         public void Move();
         public void Left();
         public void Right();
-
         public Status Status { get; set; }
         public string Name { get; set; }
     }

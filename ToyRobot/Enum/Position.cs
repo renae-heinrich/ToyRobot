@@ -1,4 +1,4 @@
-namespace ToyRobot
+namespace ToyRobot.Enum
 {
     public enum Position
     {

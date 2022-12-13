@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace ToyRobot
+namespace ToyRobot.Enum
 {
     public enum Status
     {

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using ToyRobot.Enum;
+using ToyRobot.Interfaces;
 
 namespace ToyRobot
 {
@@ -61,8 +63,8 @@ namespace ToyRobot
             var coordinates = GetCoordinates(listCommand);
 
             var facingPosition = ToTitleCase(listCommand[2]);
-
-            if (Enum.TryParse(facingPosition, out Position position))
+            
+            if (System.Enum.TryParse(facingPosition, out Position position))
             {
                 return new Input
                 {

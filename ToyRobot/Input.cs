@@ -1,3 +1,5 @@
+using ToyRobot.Enum;
+
 namespace ToyRobot
 {
     public class Input
