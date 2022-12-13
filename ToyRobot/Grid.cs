@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,15 +7,11 @@ namespace ToyRobot
     public class Grid : IGrid
     {
         private readonly List<List<string>> _board;
-        private int _row;
-        private int _column;
         private readonly string _square;
 
         public Grid(int column, int row, string square)
         {
-            _row = row;
             _square = square;
-            _column = column;
             _board = new List<List<string>>();
 
             for (int i = 0; i < column; i++)

@@ -1,4 +1,3 @@
-using System;
 using ToyRobot;
 using Xunit;
 
@@ -76,6 +75,26 @@ namespace ToyRobotTest
             };
             
             Assert.Equal(Status.Error, _grid.UpdateBoard(coordinates, "◻️"));
+        }
+        
+        [Fact]
+        public void UpdateBoard_UpdatesSquareBackToSquareIcon_WhenRobotMovesToOtherLocation()
+        {
+            var coordinates = new Coordinates
+            {
+                X = 0,
+                Y = 0
+            };
+            
+            _grid.UpdateBoard(coordinates, "🤖");
+
+            _grid.UpdateBoard(new Coordinates
+            {
+                X = 1,
+                Y = 0
+            }, "🤖");
+            
+            Assert.Equal("◻️" ,_grid.GetBoard()[0][0]);
         }
     }
 }
