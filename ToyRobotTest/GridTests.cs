@@ -78,7 +78,7 @@ namespace ToyRobotTest
         }
         
         [Fact]
-        public void UpdateBoard_UpdatesSquareBackToSquareIcon_WhenRobotMovesToOtherLocation()
+        public void UpdateBoard_ResetsSquareToGridSquare_WhenRobotMovesToOtherLocation()
         {
             var coordinates = new Coordinates
             {
