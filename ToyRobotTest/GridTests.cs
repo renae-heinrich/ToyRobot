@@ -27,23 +27,7 @@ namespace ToyRobotTest
         }
         
         [Fact]
-        public void GetGrid_()
-        {
-            var actual = _grid.GetBoard();
-
-            _grid.GetBoard()[0][0] = "X";
-            var coordinates = new Coordinates
-            {
-                X = 1,
-                Y = 0
-            };
-            
-            _grid.UpdateBoard(coordinates, "X");
-            
-        }
-        
-        [Fact]
-        public void UpdateBoard_UpdatesBoardWIthGivenIcon_WhenProvidedValidCoordinates()
+        public void UpdateBoard_UpdatesBoardWithGivenIcon_WhenProvidedValidCoordinates()
         {
             var coordinates = new Coordinates
             {
@@ -82,7 +66,7 @@ namespace ToyRobotTest
         }
         
         [Fact]
-        public void UpdateBoard_ThrowsArgumentException_WhenProvidedIconSameAsSquareIcons()
+        public void UpdateBoard_ReturnsErrorStatus_WhenProvidedIconSameAsSquareIcons()
         {
             _grid.GetBoard()[1][1] = "◻️";
             var coordinates = new Coordinates
